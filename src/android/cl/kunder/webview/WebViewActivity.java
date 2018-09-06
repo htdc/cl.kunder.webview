@@ -34,8 +34,8 @@ public class WebViewActivity extends CordovaActivity {
         if(shouldShowLoading){
             showLoading();
         }
-        
-        loadUrl((url.matches("^(.://|javascript:)[\\s\\S]$") ? "" : "file:///android_asset/www/" + (isPluginCryptFileActive() ? "+++/" : "")) + url);
+
+        loadUrl((url.matches("^(.*://|javascript:)[\\s\\S]*$") ? "" : "file:///android_asset/www/" + (isPluginCryptFileActive() ? "+++/" : "")) + url);
     }
 
     public static boolean showLoading() {
@@ -45,7 +45,7 @@ public class WebViewActivity extends CordovaActivity {
             public void run() {
                 dialog = new Dialog(activity2,android.R.style.Theme_Translucent_NoTitleBar);
                 ProgressBar progressBar = new ProgressBar(activity2,null,android.R.attr.progressBarStyle);
-                
+
                 LinearLayout linearLayout = new LinearLayout(activity2);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
                 RelativeLayout layoutPrincipal = new RelativeLayout(activity2);
