@@ -17,6 +17,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
+# (fork of kunder.cl webview plugin https://github.com/kunder-lab/cl.kunder.webview)
+
 # kunder-cordova-plugin-webview
 This cordova plugin enables you to open a second webview in your app.
 This webview is totally independent from the main webview, but allows you tu access plugins and other Cordova resources.
@@ -27,7 +29,7 @@ Report issues on [github issue tracker](https://github.com/kunder-lab/cl.kunder.
 
 ## Installation
 ```
-    cordova plugin add https://github.com/kunder-lab/cl.kunder.webview.git
+    cordova plugin add https://github.com/htdc/cordova-plugin-second-webview.git
 ```
 
 ## Supported Platforms
@@ -60,7 +62,7 @@ The main difference with inAppBrowser plugin is that cl.kunder.webview plugin ca
 
 ## Methods
 
-- __Show__: Opens a new webView 
+- __Show__: Opens a new webView
 - __Close__: Close and destroy the webView
 - __Hide__: Same as __Close__
 - __SubscribeCallback__: Suscribes a callback that is fired when webView is closed
@@ -84,7 +86,7 @@ __Parameters__:
 // Main webview
 // This will be fired on second webview close
 webview.SubscribeCallback(function(params) { console.log(params); }, function(){ console.log('error'); })
-``` 
+```
 
 ### Close/Hide
 __Parameters__:
